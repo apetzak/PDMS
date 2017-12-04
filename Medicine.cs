@@ -9,18 +9,18 @@ namespace PDMS
     class Medicine
     {
         public string Name;
-        public int Price;
-        public int CasePrice;
-        public DateTime ExpireDate;
+        public decimal Price;
+        public decimal CasePrice;
+        public int ExpirationDay;
         public int ShipmentNumber;
         public int Quantity;
 
-        public Medicine(string name, int price, int casePrice, DateTime expireDate, int shipmentNumber, int quantity)
+        public Medicine(string name, decimal price, decimal casePrice, int expirationDay, int shipmentNumber, int quantity)
         {
             this.Name = name;
             this.Price = price;
             this.CasePrice = casePrice;
-            this.ExpireDate = expireDate;
+            this.ExpirationDay = expirationDay;
             this.ShipmentNumber = shipmentNumber;
             this.Quantity = quantity;
         }

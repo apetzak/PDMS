@@ -31,18 +31,27 @@
             this.dgvResults = new System.Windows.Forms.DataGridView();
             this.lblHeader = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
+            this.lblCount = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.comboFilter = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvResults
             // 
+            this.dgvResults.AllowUserToAddRows = false;
+            this.dgvResults.AllowUserToOrderColumns = true;
             this.dgvResults.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResults.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvResults.Location = new System.Drawing.Point(12, 122);
             this.dgvResults.Name = "dgvResults";
             this.dgvResults.RowTemplate.Height = 24;
             this.dgvResults.Size = new System.Drawing.Size(758, 471);
             this.dgvResults.TabIndex = 0;
+            this.dgvResults.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResults_CellEnter);
+            this.dgvResults.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResults_CellValueChanged);
+            this.dgvResults.ColumnDisplayIndexChanged += new System.Windows.Forms.DataGridViewColumnEventHandler(this.dgvResults_ColumnDisplayIndexChanged);
             // 
             // lblHeader
             // 
@@ -65,11 +74,43 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // lblCount
+            // 
+            this.lblCount.AutoSize = true;
+            this.lblCount.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCount.Location = new System.Drawing.Point(22, 133);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(20, 22);
+            this.lblCount.TabIndex = 3;
+            this.lblCount.Text = "0";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(163, 84);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(183, 22);
+            this.txtSearch.TabIndex = 4;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // comboFilter
+            // 
+            this.comboFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboFilter.FormattingEnabled = true;
+            this.comboFilter.Location = new System.Drawing.Point(12, 82);
+            this.comboFilter.Name = "comboFilter";
+            this.comboFilter.Size = new System.Drawing.Size(145, 24);
+            this.comboFilter.TabIndex = 5;
+            this.comboFilter.SelectedValueChanged += new System.EventHandler(this.comboFilter_SelectedValueChanged);
+            // 
             // frmSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 605);
+            this.Controls.Add(this.comboFilter);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.lblCount);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblHeader);
             this.Controls.Add(this.dgvResults);
@@ -91,5 +132,8 @@
         private System.Windows.Forms.DataGridView dgvResults;
         private System.Windows.Forms.Label lblHeader;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label lblCount;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.ComboBox comboFilter;
     }
 }

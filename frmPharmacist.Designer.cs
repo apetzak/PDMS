@@ -56,6 +56,7 @@
             // 
             // btnBookOrder
             // 
+            this.btnBookOrder.Enabled = false;
             this.btnBookOrder.Location = new System.Drawing.Point(544, 147);
             this.btnBookOrder.Name = "btnBookOrder";
             this.btnBookOrder.Size = new System.Drawing.Size(218, 48);

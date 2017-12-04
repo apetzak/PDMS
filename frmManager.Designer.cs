@@ -39,7 +39,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(275, 136);
+            this.label1.Location = new System.Drawing.Point(275, 145);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(221, 55);
             this.label1.TabIndex = 13;
@@ -48,7 +48,8 @@
             // btnReportValue
             // 
             this.btnReportValue.AutoSize = true;
-            this.btnReportValue.Location = new System.Drawing.Point(209, 182);
+            this.btnReportValue.Enabled = false;
+            this.btnReportValue.Location = new System.Drawing.Point(19, 283);
             this.btnReportValue.Name = "btnReportValue";
             this.btnReportValue.Size = new System.Drawing.Size(173, 66);
             this.btnReportValue.TabIndex = 21;
@@ -58,7 +59,8 @@
             // btnReportsOrders
             // 
             this.btnReportsOrders.AutoSize = true;
-            this.btnReportsOrders.Location = new System.Drawing.Point(591, 182);
+            this.btnReportsOrders.Enabled = false;
+            this.btnReportsOrders.Location = new System.Drawing.Point(19, 443);
             this.btnReportsOrders.Name = "btnReportsOrders";
             this.btnReportsOrders.Size = new System.Drawing.Size(173, 66);
             this.btnReportsOrders.TabIndex = 20;
@@ -68,7 +70,8 @@
             // btnReportBoughtSold
             // 
             this.btnReportBoughtSold.AutoSize = true;
-            this.btnReportBoughtSold.Location = new System.Drawing.Point(398, 182);
+            this.btnReportBoughtSold.Enabled = false;
+            this.btnReportBoughtSold.Location = new System.Drawing.Point(19, 363);
             this.btnReportBoughtSold.Name = "btnReportBoughtSold";
             this.btnReportBoughtSold.Size = new System.Drawing.Size(173, 66);
             this.btnReportBoughtSold.TabIndex = 19;
@@ -78,7 +81,8 @@
             // btnReportBalance
             // 
             this.btnReportBalance.AutoSize = true;
-            this.btnReportBalance.Location = new System.Drawing.Point(19, 182);
+            this.btnReportBalance.Enabled = false;
+            this.btnReportBalance.Location = new System.Drawing.Point(19, 203);
             this.btnReportBalance.Name = "btnReportBalance";
             this.btnReportBalance.Size = new System.Drawing.Size(173, 66);
             this.btnReportBalance.TabIndex = 18;
@@ -90,9 +94,9 @@
             this.lbReports.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbReports.FormattingEnabled = true;
             this.lbReports.ItemHeight = 16;
-            this.lbReports.Location = new System.Drawing.Point(13, 254);
+            this.lbReports.Location = new System.Drawing.Point(208, 203);
             this.lbReports.Name = "lbReports";
-            this.lbReports.Size = new System.Drawing.Size(757, 292);
+            this.lbReports.Size = new System.Drawing.Size(562, 308);
             this.lbReports.TabIndex = 22;
             // 
             // frmManager

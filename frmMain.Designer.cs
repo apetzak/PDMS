@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnMedicines = new System.Windows.Forms.Button();
             this.btnPatients = new System.Windows.Forms.Button();
             this.btnWarehouses = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.comboColor = new System.Windows.Forms.ComboBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,17 +89,31 @@
             this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnLogout.Location = new System.Drawing.Point(19, 552);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(155, 41);
+            this.btnLogout.Size = new System.Drawing.Size(173, 41);
             this.btnLogout.TabIndex = 12;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // comboColor
+            // 
+            this.comboColor.DropDownHeight = 300;
+            this.comboColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboColor.FormattingEnabled = true;
+            this.comboColor.IntegralHeight = false;
+            this.comboColor.Location = new System.Drawing.Point(591, 569);
+            this.comboColor.Name = "comboColor";
+            this.comboColor.Size = new System.Drawing.Size(179, 24);
+            this.comboColor.TabIndex = 13;
+            this.toolTip1.SetToolTip(this.comboColor, "Background Color");
+            this.comboColor.SelectedValueChanged += new System.EventHandler(this.comboColor_SelectedValueChanged);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 605);
+            this.Controls.Add(this.comboColor);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.groupBox1);
             this.MaximumSize = new System.Drawing.Size(800, 1050);
@@ -117,5 +134,7 @@
         private System.Windows.Forms.Button btnWarehouses;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.ComboBox comboColor;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

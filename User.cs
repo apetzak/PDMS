@@ -11,12 +11,14 @@ namespace PDMS
         public string Username;
         public string Password;
         public int Role;
+        public string Branch;
 
-        public User(string user, string pass, int role)
+        public User(string user, string pass, int role, string Branch)
         {
             this.Username = user;
             this.Password = pass;
             this.Role = role;
+            this.Branch = Branch;
         }
     }
 }

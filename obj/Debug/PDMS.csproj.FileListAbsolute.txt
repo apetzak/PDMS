@@ -25,3 +25,12 @@ C:\Users\Alec\Documents\Visual Studio 2015\Projects\Pharmacy-Data-Management-Sys
 C:\Users\Alec\Documents\Visual Studio 2015\Projects\Pharmacy-Data-Management-System-master\PDMS\obj\Debug\PDMS.Properties.Resources.resources
 C:\Users\Alec\Documents\Visual Studio 2015\Projects\Pharmacy-Data-Management-System-master\PDMS\obj\Debug\PDMS.csproj.GenerateResource.Cache
 C:\Users\Alec\Documents\Visual Studio 2015\Projects\Pharmacy-Data-Management-System-master\PDMS\obj\Debug\PDMS.frmSearch.resources
+C:\Users\Alec\Documents\Visual Studio 2015\Projects\Pharmacy-Data-Management-System-master\PDMS\bin\Debug\EntityFramework.dll
+C:\Users\Alec\Documents\Visual Studio 2015\Projects\Pharmacy-Data-Management-System-master\PDMS\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Alec\Documents\Visual Studio 2015\Projects\Pharmacy-Data-Management-System-master\PDMS\bin\Debug\System.Data.SQLite.dll
+C:\Users\Alec\Documents\Visual Studio 2015\Projects\Pharmacy-Data-Management-System-master\PDMS\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Alec\Documents\Visual Studio 2015\Projects\Pharmacy-Data-Management-System-master\PDMS\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Alec\Documents\Visual Studio 2015\Projects\Pharmacy-Data-Management-System-master\PDMS\bin\Debug\EntityFramework.xml
+C:\Users\Alec\Documents\Visual Studio 2015\Projects\Pharmacy-Data-Management-System-master\PDMS\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Alec\Documents\Visual Studio 2015\Projects\Pharmacy-Data-Management-System-master\PDMS\bin\Debug\System.Data.SQLite.xml
+C:\Users\Alec\Documents\Visual Studio 2015\Projects\Pharmacy-Data-Management-System-master\PDMS\bin\Debug\DataGridViewAutoFilter.dll

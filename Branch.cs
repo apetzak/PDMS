@@ -13,9 +13,9 @@ namespace PDMS
         public List<Medicine> Inventory;
         public List<string> StockableMedicines;
         public DateTime EarliestExpireDate;
-        public DateTime DefaultExpectedDelivery;
+        public int DefaultExpectedDelivery;
 
-        public Branch(string name, string address, List<Medicine> inventory, List<string> stockableMedicine, DateTime expireDate, DateTime defaultDelivery)
+        public Branch(string name, string address, List<Medicine> inventory, List<string> stockableMedicine, DateTime expireDate, int defaultDelivery)
         {
             this.Name = name;
             this.Address = address;
