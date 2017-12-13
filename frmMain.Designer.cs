@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.btnMedicines = new System.Windows.Forms.Button();
             this.btnPatients = new System.Windows.Forms.Button();
             this.btnWarehouses = new System.Windows.Forms.Button();
@@ -42,7 +43,7 @@
             // btnMedicines
             // 
             this.btnMedicines.AutoSize = true;
-            this.btnMedicines.Location = new System.Drawing.Point(6, 32);
+            this.btnMedicines.Location = new System.Drawing.Point(26, 32);
             this.btnMedicines.Name = "btnMedicines";
             this.btnMedicines.Size = new System.Drawing.Size(173, 66);
             this.btnMedicines.TabIndex = 0;
@@ -53,7 +54,7 @@
             // btnPatients
             // 
             this.btnPatients.AutoSize = true;
-            this.btnPatients.Location = new System.Drawing.Point(288, 32);
+            this.btnPatients.Location = new System.Drawing.Point(240, 32);
             this.btnPatients.Name = "btnPatients";
             this.btnPatients.Size = new System.Drawing.Size(173, 66);
             this.btnPatients.TabIndex = 1;
@@ -64,7 +65,7 @@
             // btnWarehouses
             // 
             this.btnWarehouses.AutoSize = true;
-            this.btnWarehouses.Location = new System.Drawing.Point(578, 32);
+            this.btnWarehouses.Location = new System.Drawing.Point(455, 32);
             this.btnWarehouses.Name = "btnWarehouses";
             this.btnWarehouses.Size = new System.Drawing.Size(173, 66);
             this.btnWarehouses.TabIndex = 2;
@@ -74,20 +75,21 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox1.Controls.Add(this.btnMedicines);
             this.groupBox1.Controls.Add(this.btnPatients);
             this.groupBox1.Controls.Add(this.btnWarehouses);
-            this.groupBox1.Location = new System.Drawing.Point(13, 12);
+            this.groupBox1.Location = new System.Drawing.Point(215, 12);
+            this.groupBox1.MaximumSize = new System.Drawing.Size(658, 121);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(757, 121);
+            this.groupBox1.Size = new System.Drawing.Size(658, 121);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Search For";
             // 
             // btnLogout
             // 
             this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnLogout.Location = new System.Drawing.Point(19, 552);
+            this.btnLogout.Location = new System.Drawing.Point(12, 590);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(173, 41);
             this.btnLogout.TabIndex = 12;
@@ -97,11 +99,12 @@
             // 
             // comboColor
             // 
+            this.comboColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.comboColor.DropDownHeight = 300;
             this.comboColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboColor.FormattingEnabled = true;
             this.comboColor.IntegralHeight = false;
-            this.comboColor.Location = new System.Drawing.Point(591, 569);
+            this.comboColor.Location = new System.Drawing.Point(928, 607);
             this.comboColor.Name = "comboColor";
             this.comboColor.Size = new System.Drawing.Size(179, 24);
             this.comboColor.TabIndex = 13;
@@ -112,15 +115,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 605);
+            this.ClientSize = new System.Drawing.Size(1119, 643);
             this.Controls.Add(this.comboColor);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.groupBox1);
-            this.MaximumSize = new System.Drawing.Size(800, 1050);
-            this.MinimumSize = new System.Drawing.Size(800, 650);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PDMS - Main";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Resize += new System.EventHandler(this.frmMain_Resize);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

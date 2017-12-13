@@ -34,3 +34,7 @@ C:\Users\Alec\Documents\Visual Studio 2015\Projects\Pharmacy-Data-Management-Sys
 C:\Users\Alec\Documents\Visual Studio 2015\Projects\Pharmacy-Data-Management-System-master\PDMS\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Alec\Documents\Visual Studio 2015\Projects\Pharmacy-Data-Management-System-master\PDMS\bin\Debug\System.Data.SQLite.xml
 C:\Users\Alec\Documents\Visual Studio 2015\Projects\Pharmacy-Data-Management-System-master\PDMS\bin\Debug\DataGridViewAutoFilter.dll
+C:\Users\Alec\Documents\Visual Studio 2015\Projects\Pharmacy-Data-Management-System-master\PDMS\obj\Debug\PDMS.frmWarehouse.resources
+C:\Users\Alec\Documents\Visual Studio 2015\Projects\Pharmacy-Data-Management-System-master\PDMS\obj\Debug\PDMS.frmAddUser.resources
+C:\Users\Alec\Documents\Visual Studio 2015\Projects\Pharmacy-Data-Management-System-master\PDMS\obj\Debug\PDMS.groupBoxShipments.resources
+C:\Users\Alec\Documents\Visual Studio 2015\Projects\Pharmacy-Data-Management-System-master\PDMS\obj\Debug\PDMS.frmBookOrder.resources

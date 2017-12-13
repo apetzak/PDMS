@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSearch));
             this.dgvResults = new System.Windows.Forms.DataGridView();
             this.lblHeader = new System.Windows.Forms.Label();
-            this.btnBack = new System.Windows.Forms.Button();
             this.lblCount = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.comboFilter = new System.Windows.Forms.ComboBox();
@@ -41,7 +41,6 @@
             // 
             this.dgvResults.AllowUserToAddRows = false;
             this.dgvResults.AllowUserToOrderColumns = true;
-            this.dgvResults.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResults.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvResults.Location = new System.Drawing.Point(12, 122);
@@ -64,19 +63,10 @@
             this.lblHeader.TabIndex = 1;
             this.lblHeader.Text = "label1";
             // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(12, 9);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(146, 38);
-            this.btnBack.TabIndex = 2;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // lblCount
             // 
             this.lblCount.AutoSize = true;
+            this.lblCount.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lblCount.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCount.Location = new System.Drawing.Point(22, 133);
@@ -111,11 +101,9 @@
             this.Controls.Add(this.comboFilter);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblCount);
-            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblHeader);
             this.Controls.Add(this.dgvResults);
-            this.MaximumSize = new System.Drawing.Size(800, 1050);
-            this.MinimumSize = new System.Drawing.Size(800, 650);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSearch";
@@ -131,7 +119,6 @@
 
         private System.Windows.Forms.DataGridView dgvResults;
         private System.Windows.Forms.Label lblHeader;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblCount;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.ComboBox comboFilter;

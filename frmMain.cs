@@ -24,7 +24,8 @@ namespace PDMS
 
         }
 
-        public int User;
+        public string UserName;
+        public int UserRole;
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
@@ -49,12 +50,12 @@ namespace PDMS
             if (btn.Name == "btnWarehouses")
                 header = "Warehouses";
 
-            frmSearch searchForm = new frmSearch(header, User);
+            frmSearch searchForm = new frmSearch(header, UserRole);
             searchForm.BackColor = this.BackColor;
 
             //searchForm.User = User;
             searchForm.Show();
-            this.Close();
+            //this.Close();
         }
 
         private void comboColor_SelectedValueChanged(object sender, EventArgs e)
@@ -112,6 +113,11 @@ namespace PDMS
             colors.Add(SystemColors.Control);
 
             return colors;
+        }
+
+        private void frmMain_Resize(object sender, EventArgs e)
+        {
+            groupBox1.Width = this.Width - 43;
         }
     }
 }

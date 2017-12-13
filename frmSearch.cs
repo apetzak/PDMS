@@ -24,8 +24,22 @@ namespace PDMS
         {
             InitializeComponent();
             this.HeaderLabel = header;
-            this.Text = "PDMS - " + header;
-            
+            this.User = user;
+            this.Text = "PDMS - " + header;           
+
+            if (HeaderLabel == "Warehouses")
+            {
+                Button btn = new Button();
+                btn.Text = "View Inventory";
+                btn.Location = new Point(20, 20);
+                btn.Width = 160;
+                btn.Height = 35;
+                btn.Click += btnInventory_Click;
+                btn.BackColor = SystemColors.Control;
+                btn.Anchor = AnchorStyles.Top;
+                this.Controls.Add(btn);
+            }
+
             CreateColumns();
 
             foreach (string s in ColumnList)
@@ -40,9 +54,8 @@ namespace PDMS
             {
                 MessageBox.Show(ex.ToString());
             }          
-
-            User = user;
-            if (User == 1)
+        
+            if (User == 0)
             {
                 dgvResults.AllowUserToAddRows = true;
                 dgvResults.EditMode = DataGridViewEditMode.EditOnKeystrokeOrF2;
@@ -52,44 +65,52 @@ namespace PDMS
                 lblCount.Text = Convert.ToString(dgvResults.RowCount);
         }
 
+        private void btnInventory_Click(object sender, EventArgs e)
+        {                  
+            if (dgvResults.SelectedRows.Count > 0)
+            {
+                frmWarehouse form = new frmWarehouse(dgvResults.SelectedRows[0].Cells[0].Value.ToString());
+                form.BackColor = this.BackColor;
+                form.Show();
+            }
+        }
+
         public void CreateColumns()
         {
-            dgvResults.ColumnCount = 6;
             if (HeaderLabel == "Medicines")
             {
+                dgvResults.ColumnCount = 4;
                 dgvResults.Columns[0].Name = "Name";
                 dgvResults.Columns[0].Width = 120;
                 dgvResults.Columns[1].Name = "Price";
                 dgvResults.Columns[2].Name = "Case Price";
                 dgvResults.Columns[3].Name = "Expiration Days";
-                dgvResults.Columns[4].Name = "Shipment Number";
-                dgvResults.Columns[5].Name = "Quantity";
             }
             else if (HeaderLabel == "Patients")
             {
-                dgvResults.Columns[0].Name = "First Name";
+                dgvResults.ColumnCount = 7;
+                dgvResults.Columns[0].Name = "Name";
                 dgvResults.Columns[0].Width = 120;
-                dgvResults.Columns[1].Name = "Last Name";
-                dgvResults.Columns[1].Width = 120;
-                dgvResults.Columns[2].Name = "Date of Birth";
-                dgvResults.Columns[2].Width = 80;
-                dgvResults.Columns[3].Name = "Prescription";
-                dgvResults.Columns[4].Name = "Insurance";
-                dgvResults.Columns[4].Width = 150;
-                dgvResults.Columns[5].Name = "Last Visit Date";
-                dgvResults.Columns[5].Width = 80;
+                dgvResults.Columns[1].Name = "Date of Birth";
+                dgvResults.Columns[1].Width = 80;
+                dgvResults.Columns[2].Name = "Prescription";
+                dgvResults.Columns[3].Name = "Insurance";
+                dgvResults.Columns[3].Width = 150;
+                dgvResults.Columns[4].Name = "Last Visit Date";
+                dgvResults.Columns[5].Name = "Email";
+                dgvResults.Columns[5].Width = 150;
+                dgvResults.Columns[6].Name = "Address";
+                dgvResults.Columns[6].Width = 420;
+
             }
             else if (HeaderLabel == "Warehouses")
             {
+                dgvResults.ColumnCount = 3;
                 dgvResults.Columns[0].Name = "Name";
+                dgvResults.Columns[0].Width = 150;
                 dgvResults.Columns[1].Name = "Address";
-                dgvResults.Columns[1].Width = 150;
-                dgvResults.Columns[2].Name = "Inventory";
-                dgvResults.Columns[3].Name = "Stockable Medicines";
-                dgvResults.Columns[3].Width = 150;
-                dgvResults.Columns[4].Name = "Earliest Expire Date";
-                dgvResults.Columns[4].Width = 80;
-                dgvResults.Columns[5].Name = "Default Expected Delivery";
+                dgvResults.Columns[1].Width = 420;
+                dgvResults.Columns[2].Name = "Default Expected Delivery";
             }
 
             foreach (DataGridViewColumn c in dgvResults.Columns)
@@ -111,6 +132,7 @@ namespace PDMS
         private void frmSearch_Resize(object sender, EventArgs e)
         {
             dgvResults.Height = this.Height - 179;
+            dgvResults.Width = this.Width - 42;
         }
 
         private void frmSearch_VisibleChanged(object sender, EventArgs e)
@@ -120,35 +142,29 @@ namespace PDMS
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            if (User == 1)
+            if (User == 0)
             {
                 frmAdmin f = new frmAdmin();
-                f.BackColor = this.BackColor;
-                f.User = User;
-                f.Show();
+                ShowForm(f);
+            }
+            if (User == 1)
+            {
+                frmPharmacist f = new frmPharmacist();
+                ShowForm(f);
             }
             if (User == 2)
             {
-                frmPharmacist f = new frmPharmacist();
-                f.BackColor = this.BackColor;
-                f.User = User;
-                f.Show();
-            }
-            if (User == 3)
-            {
                 frmManager f = new frmManager();
-                f.BackColor = this.BackColor;
-                f.User = User;
-                f.Show();
-            }
-            if (User == 4)
-            {
-                frmMain f = new frmMain();
-                f.BackColor = this.BackColor;
-                f.User = User;
-                f.Show();
+                ShowForm(f);
             }
             this.Close();
+        }
+
+        public void ShowForm(frmMain f)
+        {
+            f.BackColor = this.BackColor;
+            f.UserRole = User;
+            f.Show();
         }
 
         private void dgvResults_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -170,7 +186,7 @@ namespace PDMS
         {
             controller.LoadData(HeaderLabel, dgvResults, txtSearch.Text, comboFilter.SelectedItem.ToString());
             lblCount.Text = dgvResults.Rows.Count.ToString();
-            if (User == 1)
+            if (User == 0)
                 lblCount.Text = Convert.ToString(dgvResults.Rows.Count - 1);
         }
 

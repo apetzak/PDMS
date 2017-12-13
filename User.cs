@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PDMS
 {
-    class User
+    public class User
     {
         public string Username;
         public string Password;
